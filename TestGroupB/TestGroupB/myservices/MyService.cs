@@ -18,7 +18,10 @@ public class MyService : IService
     public async Task<Book> getBook(int idBook)
     {
         Book book = await _bookRepository.getBookWithTitle(idBook);
-
+        IEnumerable<Author> authors = await _bookRepository.getAuthors(idBook);
+        book.authors = (List<Author>)authors;
+        IEnumerable<string> generes = await _bookRepository.getGeneres(idBook);
+        book.generes=(List<string>) generes;
         return book;
     }
 }

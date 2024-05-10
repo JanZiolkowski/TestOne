@@ -4,6 +4,6 @@ public class Book
 {
     public int IdBook { set; get; }
     public string Title { set; get; }
-    public IEnumerable<string> authors { get; set; }
-    public IEnumerable<string> generes { get; set; }
+    public List<Author> authors { get; set; }
+    public List<string> generes { get; set; }
 }
