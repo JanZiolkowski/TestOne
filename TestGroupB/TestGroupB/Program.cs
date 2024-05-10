@@ -1,3 +1,6 @@
+using TestGroupB.myrepositories;
+using TestGroupB.myservices;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddXmlSerializerFormatters();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IService, MyService>();
+builder.Services.AddScoped<IGenreRepository,GenreRepository>();
 
 var app = builder.Build();
 

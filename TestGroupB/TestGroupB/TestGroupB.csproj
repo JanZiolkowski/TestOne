@@ -14,10 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="mycontrollers\" />
       <Folder Include="mymodels\" />
-      <Folder Include="myrepositories\" />
-      <Folder Include="myservices\" />
     </ItemGroup>
 
 </Project>
